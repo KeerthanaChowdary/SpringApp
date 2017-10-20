@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-public interface FoodFacilityRepository extends CrudRepository<FoodFacility,String> {
+public interface FoodFacilityRepository extends CrudRepository<FoodFacility, String> {
 
 	List<FoodFacility> findByapplicantIgnoreCaseContaining(String name);
 
@@ -16,5 +16,4 @@ public interface FoodFacilityRepository extends CrudRepository<FoodFacility,Stri
 
 	FoodFacility findOneBylocationId(String id);
 
-	
 }

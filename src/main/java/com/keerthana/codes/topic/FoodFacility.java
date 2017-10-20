@@ -15,26 +15,30 @@ public class FoodFacility {
 	private String applicant; //1
 	private String status;//10
 	private String address; //5
-	
+	private String expirationDate;//22
+	private double xCoordinate;//12
+	private double yCoordinate;//13
+
 	/*private String id;
 	private String name;
 	private String description;*/
-	
+
 	public FoodFacility() {
 	}
-	
+
 	public FoodFacility(String id, String name, String status, String address) {
+		this(id, name, status, address, "", "0.0", "0.0");
+	}
+
+	public FoodFacility(String id, String name, String status, String address, String string5, String x, String y) {
 		this.locationId = id;
 		this.applicant = name;
 		this.status = status;
 		this.address = address;
+		this.expirationDate = string5;
+		this.xCoordinate = Double.parseDouble(x);
+		this.yCoordinate = Double.parseDouble(y);
 	}
-	/*public FoodFacility(String id, String name, String description) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.description = description;
-	}*/
 
 	public Long getId() {
 		return id;
@@ -76,26 +80,54 @@ public class FoodFacility {
 		this.address = address;
 	}
 
+	public String getExpirationDate() {
+		return expirationDate;
+	}
+
+	public void setExpirationDate() {
+		this.expirationDate = "";
+	}
+
+	public double getxCoordinate() {
+		return xCoordinate;
+	}
+
+	public void setxCoordinate(int xCoordinate) {
+		this.xCoordinate = xCoordinate;
+	}
+
+	public double getyCoordinate() {
+		return yCoordinate;
+	}
+
+	public void setyCoordinate(int yCoordinate) {
+		this.yCoordinate = yCoordinate;
+	}
+
+	/*public void setExpirationDate(String expirationDate) {
+		this.expirationDate = expirationDate;
+	}
+	*/
 	/*public String getId() {
 		return id;
 	}
-
+	
 	public void setId(String id) {
 		this.id = id;
 	}
-
+	
 	public String getName() {
 		return name;
 	}
-
+	
 	public void setName(String name) {
 		this.name = name;
 	}
-
+	
 	public String getDescription() {
 		return description;
 	}
-
+	
 	public void setDescription(String description) {
 		this.description = description;
 	}*/
