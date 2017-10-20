@@ -30,6 +30,10 @@ public class FoodFacility {
 		this(id, name, status, address, "", "0.0", "0.0");
 	}
 
+	public FoodFacility(String id, String name, String status, String address, String expDate) {
+		this(id, name, status, address, expDate, "0.0", "0.0");
+	}
+
 	public FoodFacility(String id, String name, String status, String address, String string5, String x, String y) {
 		this.locationId = id;
 		this.applicant = name;

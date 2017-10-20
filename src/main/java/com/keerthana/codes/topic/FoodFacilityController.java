@@ -76,9 +76,13 @@ public class FoodFacilityController {
 		while (dataRow != null) {
 			String[] dataArray = dataRow.split("\t");
 			//FoodFacility(String id, String name, String status, String address)
-			FoodFacility temp = new FoodFacility(dataArray[0], dataArray[1], dataArray[10], dataArray[5], dataArray[22], dataArray[12], dataArray[13]);
-			//FoodFacility topic = null;
-
+			FoodFacility temp;
+			if (dataArray[12].isEmpty() || dataArray[13].isEmpty()) {
+				temp = new FoodFacility(dataArray[0], dataArray[1], dataArray[10], dataArray[5], dataArray[22]);
+			} else {
+				temp = new FoodFacility(dataArray[0], dataArray[1], dataArray[10], dataArray[5], dataArray[22], dataArray[12], dataArray[13]);
+				//FoodFacility topic = null;
+			}
 			topicService.addTopic(temp);
 
 			dataRow = TSVFile.readLine();
