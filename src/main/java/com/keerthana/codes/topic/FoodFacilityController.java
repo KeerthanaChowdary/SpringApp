@@ -69,8 +69,7 @@ public class FoodFacilityController {
 	@RequestMapping(value = "/addTheDataSet", method = RequestMethod.POST)
 	public void addFacilities() throws IOException {
 
-		//		BufferedReader TSVFile = new BufferedReader(new FileReader("/home/abzooba/Desktop/myGate/mobilefooddatabase.tsv"));
-		BufferedReader TSVFile = new BufferedReader(new FileReader("/home/abzooba/Desktop/myGate/mobilefooddatabase (copy).tsv"));
+		BufferedReader TSVFile = new BufferedReader(new FileReader("mobilefooddatabase.tsv"));
 
 		TSVFile.readLine();
 		String dataRow = TSVFile.readLine();
